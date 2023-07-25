@@ -1,3 +1,5 @@
+const consoleLogSpy = cy.spy(console, 'log');
+
 let number = 1;
 console.log(number--);   // Вывод: 1
 console.log(++number);   // Вывод: 3
