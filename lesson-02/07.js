@@ -1,4 +1,4 @@
-let passportMarried = {
+const passport = {
     name: "Petr",
     surname: "Petrov",
     address: {
@@ -7,10 +7,11 @@ let passportMarried = {
     }
 };
 
-passportMarried.married = true; 
+passport.married = true; 
 
-let passportMarried2 = JSON.parse(JSON.stringify(passportMarried)); 
-passportMarried2.newKey = "newValue"; 
+const passport2 = JSON.parse(JSON.stringify(passport)); 
+passport2.newKey = "newValue"; 
+delete passport2.newKey; 
 
-console.log(passportMarried); 
-console.log(passportMarried2); 
+console.log(passport); 
+console.log(passport2); 
