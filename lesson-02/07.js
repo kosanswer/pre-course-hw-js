@@ -1,17 +1,19 @@
-const passport = {
+let passportMarried = {
     name: "Petr",
     surname: "Petrov",
     address: {
-        country: "USA",
-        city: "Bobryisk"
-    }
+    country: "USA",
+    city: "Bobryisk",
+    },
 };
 
-passport.married = true; 
+let passportMarried2 = {
+    ...passportMarried, 
+    married: true, 
+    address: {
+...passportMarried.address, 
+    },
+};
 
-const passport2 = JSON.parse(JSON.stringify(passport)); 
-passport2.newKey = "newValue"; 
-delete passport2.newKey; 
-
-console.log(passport); 
-console.log(passport2); 
+console.log(passportMarried);
+console.log(passportMarried2);
