@@ -1,6 +1,7 @@
-function square(num) {
-    return num * num;
-  }
-  
-  // Test cases
-  console.log(square(5)); // Output: 25
+const colors = ["синий", "черный", "зеленый", "красный", "желтый", "зеленый"];
+
+function createColorString() {
+    return colors.filter(color => color === "черный" || color === "красный" || color === "желтый").join('-')
+}
+
+console.log(createColorString());
